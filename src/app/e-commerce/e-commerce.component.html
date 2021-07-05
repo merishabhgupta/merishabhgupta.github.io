@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-6">
+    </div>
+    <div class="col-md-6">
+        <span class="icon">
+            <select class="form-select" name="price" id="pSort" [(ngModel)]="sortBy" (ngModelChange)="sortProducts()">
+                <option disabled>-Sort by Price-</option>
+                <option >High to Low</option>
+                <option >Low to High</option>
+            </select>
+        </span>
+        <span class="icon" title="List View" (click)="isGrid=false">
+            <i class="fa fa-list fa-lg"></i>
+        </span>
+        <span class="icon" title="Grid View" (click)="isGrid=true">
+            <i class="fa fa-th-large fa-lg"></i>
+        </span>
+    </div>
+</div>
+<div class="row">
+    <div [ngClass]="isGrid? 'col-md-3 mt-4' : 'col-md-6 mt-4'" *ngFor="let product of productList">
+        <div class="card shadow p-3 bg-white rounded" style="width: 18rem;">
+            <img [src]="product.image" class="card-img-top" alt="product image not available">
+            <div class="card-body">
+                <h5 class="card-title">{{ product.title }}</h5>
+                <p class="card-text">{{ product.description }}</p>
+            </div>
+            <div class="card-footer text-center">
+                <strong>$ {{ product.price }}</strong>
+            </div>
+        </div>
+    </div>
+</div>

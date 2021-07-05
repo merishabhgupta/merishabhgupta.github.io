@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-md-4 rectangle">
+        <app-countdown-timer [timer]="firedTime"></app-countdown-timer>
+    </div>
+    <div class="col-md-4 rectangle">
+        <app-set-timer (timerFired)="onTimerFired($event)" (timeStampEvent)="onTimeStamp($event)" (trackClick)="onTrackClick($event)"></app-set-timer>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 rectangle">
+        <app-time-stamps [timeStamp]="firedStamp"></app-time-stamps>
+    </div>
+    <div class="col-md-4 rectangle">
+        <app-start-pause-counter [trackClick]="trackClick"></app-start-pause-counter>
+    </div>
+</div>

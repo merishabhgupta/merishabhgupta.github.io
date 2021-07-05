@@ -1,0 +1,33 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 17%;
+}
+
+.rectangle {
+    margin: auto;
+    border: 3px solid black;
+    width: 100%;
+    /* margin-top: 25%; */
+    padding: 10px;
+}
+
+.rotatingText {
+  position: absolute;
+  left: 45%;
+  animation: rotation 3s infinite linear;
+}
+
+.rotatingText:hover {
+  animation-play-state: paused;
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}

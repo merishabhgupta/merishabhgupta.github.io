@@ -1,0 +1,14 @@
+.box {
+    width: 200px !important;
+    height: 200px;
+    position: relative;
+    border: 1px solid black;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

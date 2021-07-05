@@ -1,0 +1,8 @@
+.rectangle {
+    margin: auto;
+    border: 3px solid black;
+    /* width: 100%; */
+    /* margin-top: 25%; */
+    padding: 10px;
+    margin: 5%;
+}

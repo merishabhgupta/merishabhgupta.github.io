@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-12">
+        <label for="timer">Enter Timer Limit: </label>
+        <input type="number" name="timer" id="timer" #timer>
+        <div class="row">
+            <div *ngIf="!isStarted" class="col-md-3">
+                <button class="btn btn-primary" (click)="onStartTimer(timer.value)">Start</button>
+            </div>
+            <div *ngIf="isStarted" class="col-md-3">
+                <button class="btn btn-primary" (click)="onPauseTimer()">Pause</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-warning" (click)="onResetTimer();timer.value=null">Reset</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div *ngFor="let pause of pausedAt">
+        <span>Paused at {{ pause }}</span>
+    </div>
+</div>

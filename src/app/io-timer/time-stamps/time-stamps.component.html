@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-md-12">
+        <h4>Time Stamps</h4>
+    </div>
+</div>
+<!-- {{timeStamp.status}} {{timeStamp.stamp}} -->
+<div class="row" *ngFor="let time of timeStamps">
+    <div class="col-md-12">
+        {{ time?.status }} {{ time?.stamp | date: 'dd-MM-yyyy hh:mm:ss a' }}
+    </div>
+</div>
